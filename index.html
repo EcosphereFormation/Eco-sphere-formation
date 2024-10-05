@@ -5,9 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Inscription à la formation Thermostat Connecté</title>
   <style>
+    /* Style général pour le fond en dégradé bleu */
     body {
       font-family: Arial, sans-serif;
-      background: linear-gradient(120deg, #89CFF0, #4682B4);
+      background: linear-gradient(120deg, #89CFF0, #4682B4); /* Fond en dégradé de bleu */
       margin: 0;
       padding: 0;
       display: flex;
@@ -16,6 +17,7 @@
       height: 100vh;
     }
 
+    /* Style pour le conteneur principal */
     .container {
       background-color: white;
       padding: 20px;
@@ -25,21 +27,25 @@
       width: 100%;
     }
 
+    /* Style pour les titres */
     h2 {
       text-align: center;
       color: #333;
     }
 
+    /* Style général pour les formulaires */
     form {
       display: flex;
       flex-direction: column;
     }
 
+    /* Style pour les étiquettes */
     label {
       margin-top: 10px;
       font-weight: bold;
     }
 
+    /* Style pour les champs de saisie, listes déroulantes et zones de texte */
     input, select, textarea {
       padding: 10px;
       margin-top: 5px;
@@ -48,32 +54,45 @@
       font-size: 14px;
     }
 
+    /* Style pour le bouton de soumission */
     input[type="submit"] {
-      background-color: #4682B4;
+      background-color: #4682B4; /* Couleur du bouton */
       color: white;
       border: none;
       cursor: pointer;
       margin-top: 20px;
     }
 
+    /* Changement de couleur au survol du bouton de soumission */
     input[type="submit"]:hover {
       background-color: #5a9bd4;
     }
 
+    /* Style pour les listes */
     ul {
-      list-style-type: square;
+      list-style-type: square; /* Liste avec puces carrées */
       padding-left: 20px;
+    }
+
+    /* Style pour les paragraphes */
+    p {
+      font-size: 16px;
+      color: #333;
     }
   </style>
 </head>
 <body>
   <div class="container">
+    <!-- Titre principal du formulaire -->
     <h2>Inscription à la formation Thermostat Connecté</h2>
+
+    <!-- Informations générales de la formation -->
     <p><strong>Intitulé de la formation : </strong>Formation Thermostat Connecté</p>
     <p><strong>Date de formation : </strong>15 et 16 octobre</p>
     <p><strong>Lieu : </strong>Bordeaux</p>
     <p><strong>Organisateur : </strong>Eco Sphère Formation</p>
-    
+
+    <!-- Formulaire d'inscription -->
     <form id="registrationForm" onsubmit="submitForm(); return false;">
       <label for="nom">Nom :</label>
       <input type="text" id="nom" name="nom" required>
@@ -122,9 +141,10 @@
     </form>
   </div>
 
+  <!-- Code JavaScript pour l'envoi du formulaire -->
   <script>
     function submitForm() {
-      var url = "https://script.google.com/macros/s/AKfycbwpSNG2Gm33IID76_frsmybDqL2zKtUbKe3wdPuucZO1b-Flaj7cpg949wOHQ1-QxBbLQ/exec"; // URL de votre script déployé (Google Sheets)
+      var url = "https://script.google.com/macros/s/AKfycbwpSNG2Gm33IID76_frsmybDqL2zKtUbKe3wdPuucZO1b-Flaj7cpg949wOHQ1-QxBbLQ/exec"; // URL de votre script déployé
       var data = {
         nom: document.getElementById('nom').value,
         prenom: document.getElementById('prenom').value,
