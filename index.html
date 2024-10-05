@@ -3,115 +3,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inscription à la formation</title>
+    <title>Formation Thermostat Connecté</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background: linear-gradient(to bottom right, #4facfe, #00f2fe); /* Dégradé de bleu */
-            color: #333;
-            margin: 0;
+            background: linear-gradient(to bottom, #1e3c72, #2a5298); /* Dégradé de bleu */
+            color: #fff;
             padding: 20px;
         }
         .container {
-            width: 60%;
-            margin: auto;
-            background: rgba(255, 255, 255, 0.8);
+            background: rgba(255, 255, 255, 0.9);
             padding: 20px;
             border-radius: 8px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 0 auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            color: #000;
         }
-        h1, h3 {
+        h1, h2 {
             text-align: center;
         }
-        img {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            width: 150px;
-        }
         label {
-            font-weight: bold;
+            display: block;
+            margin: 15px 0 5px;
         }
-        input, select {
-            width: calc(100% - 22px);
+        input[type="text"],
+        input[type="date"],
+        input[type="email"],
+        input[type="tel"],
+        select,
+        textarea {
+            width: calc(100% - 20px);
             padding: 10px;
-            margin: 5px 0 15px 0;
-            border: 1px solid #ccc;
+            margin: 10px 0;
             border-radius: 4px;
+            border: 1px solid #ddd;
+            box-sizing: border-box;
         }
-        button {
-            width: 100%;
-            background-color: #007BFF;
-            color: white;
-            padding: 14px 20px;
-            margin: 8px 0;
+        .documents ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        .submit-button {
+            background-color: #1e3c72;
+            color: #fff;
             border: none;
+            padding: 15px 20px;
             border-radius: 4px;
             cursor: pointer;
+            width: 100%;
+            font-size: 16px;
         }
-        button:hover {
-            background-color: #0056b3;
+        .submit-button:hover {
+            background-color: #2a5298;
         }
-        ul {
-            list-style-type: disc;
-            margin-left: 20px;
+        .thermostat-image {
+            display: block;
+            margin: 20px auto;
+            max-width: 100px;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3d/Thermostat.png" alt="Thermostat connecté">
-        <h1>Inscription à la formation</h1>
+        <h1>Formation Thermostat Connecté</h1>
+        <h2>Date de formation : 15 et 16 octobre 2024</h2>
+        <h2>Lieu : Bordeaux</h2>
+        <h2>Organisateur : Eco Sphère Formation</h2>
         
-        <p>Intitulé de la formation : Thermostat connecté</p>
-        <p>Date de formation : 15 et 16 octobre</p>
-        <p>Lieu : Bordeaux</p>
-        <p>Organisateur : Eco Sphère Formation</p>
-        
-        <form id="inscriptionForm" method="POST" action="https://script.google.com/macros/s/AKfycbwamHp8s1r96ZzzafS1GTRghhscZI2BE2gz8HXZtQ-Z208C6o81UESZfhFWQhHmyl6Pog/exec">
+        <form id="registration-form">
             <label for="nom">Nom :</label>
-            <input type="text" id="nom" name="nom" required><br>
-
+            <input type="text" id="nom" name="nom" required>
+            
             <label for="prenom">Prénom :</label>
-            <input type="text" id="prenom" name="prenom" required><br>
-
+            <input type="text" id="prenom" name="prenom" required>
+            
             <label for="date_naissance">Date de naissance :</label>
-            <input type="date" id="date_naissance" name="date_naissance" required><br>
-
+            <input type="date" id="date_naissance" name="date_naissance" required>
+            
             <label for="adresse">Adresse :</label>
-            <input type="text" id="adresse" name="adresse" required><br>
-
+            <input type="text" id="adresse" name="adresse" required>
+            
             <label for="code_postal">Code postal :</label>
-            <input type="text" id="code_postal" name="code_postal" required><br>
-
+            <input type="text" id="code_postal" name="code_postal" required>
+            
             <label for="ville">Ville :</label>
-            <input type="text" id="ville" name="ville" required><br>
-
+            <input type="text" id="ville" name="ville" required>
+            
             <label for="telephone">Téléphone :</label>
-            <input type="tel" id="telephone" name="telephone" required><br>
+            <input type="tel" id="telephone" name="telephone" required>
+            
+            <label for="email">E-mail :</label>
+            <input type="email" id="email" name="email" required>
+            
+            <div class="documents">
+                <h3>Documents à fournir :</h3>
+                <ul>
+                    <li>Photocopie de carte d’identité</li>
+                    <li>Justificatif de domicile de moins de 3 mois</li>
+                    <li>CV ou document récapitulatif des compétences</li>
+                </ul>
+            </div>
 
-            <label for="email">Email :</label>
-            <input type="email" id="email" name="email" required><br>
-
-            <h3>Documents à fournir :</h3>
-            <ul>
-                <li>Photocopie de carte d’identité</li>
-                <li>Justificatif de domicile de moins de 3 mois</li>
-                <li>CV ou document récapitulatif des compétences</li>
-            </ul>
-
+            <h3>Frais d'inscription : 1000€</h3>
+            
             <label for="payment_method">Mode de paiement :</label>
             <select id="payment_method" name="payment_method" required>
-                <option value="Cheque">Chèque</option>
-                <option value="Virement">Virement</option>
-                <option value="Espèces">Espèces</option>
-            </select><br>
-
+                <option value="cheque">Chèque</option>
+                <option value="especes">Espèces</option>
+                <option value="virement">Virement Bancaire</option>
+            </select>
+            
             <label for="signature">Signature :</label>
-            <input type="text" id="signature" name="signature" required><br>
-
-            <button type="submit">Valider l'inscription</button>
+            <input type="text" id="signature" name="signature" required>
+            
+            <button type="submit" class="submit-button">Valider l'inscription</button>
         </form>
+        <img src="thermostat.png" alt="Thermostat Connecté" class="thermostat-image">
     </div>
+
+    <script>
+        document.getElementById('registration-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Collecte des données
+            const formData = new FormData(e.target);
+            const data = {
+                nom: formData.get('nom'),
+                prenom: formData.get('prenom'),
+                date_naissance: formData.get('date_naissance'),
+                adresse: formData.get('adresse'),
+                code_postal: formData.get('code_postal'),
+                ville: formData.get('ville'),
+                telephone: formData.get('telephone'),
+                email: formData.get('email'),
+                payment_method: formData.get('payment_method'),
+                signature: formData.get('signature')
+            };
+
+            // URL de l'API Google Apps Script
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbwamHp8s1r96ZzzafS1GTRghhscZI2BE2gz8HXZtQ-Z208C6o81UESZfhFWQhHmyl6Pog/exec';
+
+            // Envoi des données via une requête POST
+            fetch(scriptURL, {
+                method: 'POST',
+                body: JSON.stringify(data),
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+            })
+            .then(response => response.text())
+            .then(result => {
+                alert('Inscription réussie : ' + result);
+            })
+            .catch(error => {
+                alert('Erreur lors de l\'inscription : ' + error);
+            });
+        });
+    </script>
 </body>
 </html>
